@@ -6,8 +6,10 @@
 
 The `as` keyword was part of Rust’s early syntax, before the introduction of postfix operators like `.await`. Consider the following example using `as`:
 
-```rust, ignore
-let index = y as usize * width.get() as usize + x as usize;
+```rust
+fn calc_index(x: u64, y: u64, width: std::num::NonZeroI64) -> usize {
+    y as usize * width.get() as usize + x as usize
+}
 ```
 
 In this case, the precedence of the `as` keyword is mixed with other operators, making the expression harder to read. Additionally, `as` does not support chained operations, limiting its flexibility in complex expressions.
@@ -32,10 +34,12 @@ cargo add as-what
 
 Here is a simple example of how to use the library:
 
-```rust, ignore
+```rust
 use as_what::AsUsize;
 
-let index = y.as_usize() * width.get().as_usize() + x.as_usize();
+fn calc_index(x: u64, y: u64, width: std::num::NonZeroI64) -> usize {
+    y.as_usize() * width.get().as_usize() + x.as_usize()
+}
 ```
 
 ## Contributing
