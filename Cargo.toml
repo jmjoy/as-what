@@ -1,0 +1,10 @@
+[package]
+name = "as-what"
+version = "0.1.0"
+edition = "2021"
+authors = ["jmjoy <jmjoy@qq.com>"]
+description = "Provide a bunch of `as` traits."
+repository = "https://github.com/jmjoy/as-what"
+license = "MIT"
+
+[dependencies]
