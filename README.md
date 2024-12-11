@@ -6,7 +6,7 @@
 
 The `as` keyword was part of Rust’s early syntax, before the introduction of postfix operators like `.await`. Consider the following example using `as`:
 
-```rust
+```rust, ignore
 let index = y as usize * width.get() as usize + x as usize;
 ```
 
@@ -32,7 +32,7 @@ cargo add as-what
 
 Here is a simple example of how to use the library:
 
-```rust
+```rust, ignore
 use as_what::AsUsize;
 
 let index = y.as_usize() * width.get().as_usize() + x.as_usize();
