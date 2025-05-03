@@ -1,6 +1,6 @@
 [package]
 name = "as-what"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["jmjoy <jmjoy@qq.com>"]
 description = "Provide a bunch of `as` traits."
