@@ -1,5 +1,6 @@
 #![no_std]
 #![warn(rust_2018_idioms, clippy::dbg_macro, clippy::print_stdout)]
+#![allow(clippy::wrong_self_convention)]
 #![doc = include_str!("../README.md")]
 
 macro_rules! as_trait {
@@ -104,9 +105,4 @@ as_trait!(
     as_f64,
     [i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize, f32, f64]
 );
-as_trait!(
-    char,
-    AsChar,
-    as_char,
-    [u8, char]
-);
+as_trait!(char, AsChar, as_char, [u8, char]);
